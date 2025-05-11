@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammed Dilshad | Portfolio</title>
+    <style>
+      :root {
+        --bg-light: #f0f2f5;
+        --bg-dark: #ced9e4;
+        --text-color: #333;
+        --accent-light: #f0f2f5;
+        --accent-dark: #ecf6ff;
+        --nav-bg: #011f4b;
+        --nav-hover: #ffcc00;
+        --project-bg: #f9f9f9;
+        --project-border: #00438a;
+        --footer-bg: #002244;
+        --footer-text: #fff;
+        --link-color: #007acc;
+        --heading-border: #004183;
+        --heading-color: #023364;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(
+          to bottom,
+          var(--accent-light) 30%,
+          var(--accent-dark) 70%
+        );
+        color: var(--text-color);
+        line-height: 1.6;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background: var(--bg-light);
+        color: #272727;
+        text-align: center;
+        padding: 50px 20px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background: var(--nav-bg);
+        padding: 10px 5px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        position:sticky;
+        top:0;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: var(--nav-hover);
+      }
+
+      section {
+        padding: 10px 20px 20px 20px;
+        background: #fff;
+        margin: 30px auto;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+        animation: slideUp 0.7s ease;
+      }
+
+      h2 {
+        border-left: 6px solid var(--heading-border);
+        padding-left: 10px;
+        color: var(--heading-color);
+      }
+
+      .project,
+      .experience {
+        margin-bottom: 20px;
+        padding: 20px;
+        background: var(--project-bg);
+        border-left: 4px solid var(--project-border);
+        border-radius: 6px;
+      }
+
+      footer {
+        text-align: center;
+        background: var(--footer-bg);
+        color: var(--footer-text);
+        padding: 20px;
+        margin-top: 40px;
+      }
+
+      a {
+        color: var(--link-color);
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        section {
+          margin: 30px 20px;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Muhammed Dilshad</h1>
+      <p>IoT Developer | Data Analyst | Embedded Systems</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm an Electrical & Electronics Engineering student passionate about IoT
+        development, troubleshooting, and data analysis. Seeking opportunities
+        to innovate and apply my skills in real-world applications.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: Python, C</li>
+        <li>IoT: Arduino, ESP32</li>
+        <li>PCB Design: KiCAD, Eagle CAD</li>
+        <li>Simulation Tools: Multisim, Keil µVision5</li>
+        <li>Cloud Platforms: Firebase</li>
+        <li>3D Modelling: Fusion 360</li>
+        <li>Static Web Development</li>
+        <li>Data Analysis & Visualization: Excel</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>IoT & Data Logging System for GKDC Go-Kart</h3>
+        <p>
+          Developed a LoRa SX1278-based system for real-time performance
+          analysis.
+        </p>
+      </div>
+      <div class="project">
+        <h3>RFID-Based Attendance System</h3>
+        <p>Automated attendance logging with Firebase integration.</p>
+      </div>
+      <div class="project">
+        <h3>IllumiClick (August 2024)</h3>
+        <p>Developed a remote LED control system using ESP32 and Firebase.</p>
+      </div>
+      <div class="project">
+        <h3>Rainwater Detector (August 2024)</h3>
+        <p>
+          Built a rainwater detection system to optimize rainwater harvesting.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Automatic Light Intensity Controller (August 2024)</h3>
+        <p>Created an Arduino-based system to optimize energy consumption.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience">
+        <p><strong>IoT Lead, Team Mitsmotorsports | GKDC 2025</strong></p>
+        <p>
+          Led the IoT system for a nationally ranked Go-Kart team (AIR 7, Kerala
+          1st). Designed and implemented data logging solutions for vehicle
+          performance analysis.
+        </p>
+      </div>
+
+      <div class="experience">
+        <p>
+          <strong
+            >AI Chatbot Developer Intern, IBM SkillsBuild (June 2024 – July
+            2024)</strong
+          >
+        </p>
+        <p>
+          Designed and deployed an AI chatbot with energy assessment
+          capabilities. Enhanced user interaction through intuitive interface
+          design.
+        </p>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Introduction to IoT, Cisco (March 2024)</li>
+        <li>Introduction to Packet Tracer, Cisco (April 2024)</li>
+        <li>
+          Getting Started with Artificial Intelligence, IBM SkillsBuild (June
+          2024)
+        </li>
+        <li>
+          Artificial Intelligence Fundamentals, IBM SkillsBuild (June 2024)
+        </li>
+        <li>Project Management Fundamentals, IBM SkillsBuild (July 2024)</li>
+        <li>Digital Design with Verilog, NPTEL (February 2024)</li>
+      </ul>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>
+          Shortlisted in the<strong> Top 20 </strong>Nationwide Teams at the
+          <strong>Big Idea Tech Competition by V-Guard (2024)</strong>.
+        </li>
+        <li>
+          <strong>All India Rank 7 </strong>& All Kerala 1st Place –
+          <strong>GKDC 2025.</strong>
+        </li>
+        <li>
+          <strong>2nd Runner-up</strong> – Mazhavil Manorama Fastrack
+          <strong>Automobile Project Award 2025.</strong>
+        </li>
+        <li>
+          <strong>Runner-up</strong> in
+          <strong>Freshman Firewall CTF</strong> at MITS, among 10+ teams (March
+          2024).
+        </li>
+        <li>
+          Participated in the Brain-Computer Interface workshop at MITS (March
+          2024).
+        </li>
+        <li>
+          Attended the Autonomous Driving System and Machine Learning workshop
+          at NIT Calicut (March 2023).
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:muhammeddilshad.9153@gmail.com">
+          muhammeddilshad.9153@gmail.com
+        </a>
+      </p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/muhammeddilshadk/">
+          Muhammed Dilshad K
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Muhammed Dilshad K. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

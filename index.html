@@ -34,7 +34,25 @@
         color: var(--text-color);
         line-height: 1.6;
         overflow-x: hidden;
+        overflow-y: scroll;
         scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        /* display:none; */
+        width: 10px;
+        /* background-color: var(--accent-light); */
+        background: transparent;
+        position:absolute;
+      }
+
+      ::-webkit-scrollbar-track-piece,
+      ::-webkit-scrollbar-track,
+      ::-webkit-scrollbar-button {
+        display: none;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--footer-bg);
       }
 
       header {
@@ -43,17 +61,18 @@
         text-align: center;
         padding: 50px 20px;
         animation: fadeIn 1s ease-in-out;
+        font-size:larger;
       }
 
       nav {
         display: flex;
         justify-content: center;
         background: var(--nav-bg);
-        padding: 10px 5px;
+        padding: 0px 5px;
         text-align: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        position:sticky;
-        top:0;
+        position: sticky;
+        top: 0;
       }
 
       nav ul {
@@ -63,7 +82,7 @@
 
       nav ul li {
         display: inline;
-        margin: 0 15px;
+        margin: 0 25px;
       }
 
       nav ul li a {
@@ -85,12 +104,28 @@
         border-radius: 12px;
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
         animation: slideUp 0.7s ease;
+        scroll-margin-top: 70px;
       }
 
       h2 {
         border-left: 6px solid var(--heading-border);
         padding-left: 10px;
         color: var(--heading-color);
+      }
+
+      #skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+      }
+
+      #skills li {
+        list-style: none;
+        background: var(--accent-dark);
+        color: var(--footer-bg);
+        padding: 8px 12px;
+        border-radius: 6px;
       }
 
       .project,
@@ -119,6 +154,9 @@
       }
 
       @media (max-width: 600px) {
+        ::-webkit-scrollbar {
+          display: none;
+        }
         nav ul {
           flex-direction: column;
           text-align: center;
@@ -156,7 +194,7 @@
   <body>
     <header>
       <h1>Muhammed Dilshad</h1>
-      <p>IoT Developer | Data Analyst | Embedded Systems</p>
+      <p>IoT Developer | Embedded Systems | PCB Design</p>
     </header>
 
     <nav>
@@ -170,13 +208,12 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
+    <div class="content">
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I'm an Electrical & Electronics Engineering student passionate about IoT
-        development, troubleshooting, and data analysis. Seeking opportunities
-        to innovate and apply my skills in real-world applications.
+      Electronics Engineering student who possesses robust proficiency in circuit design, embedded systems, and firmware development. Experienced in PCB design, programming microcontrollers, and real-time IoT solutions.<p>
+      I've led multiple engineering projects in various capacities, which primarily involved telemetry devices, automation, and integrated hardware–software solutions, and am increasingly interested in unmanned systems and tactical communication technologies.
       </p>
     </section>
 
@@ -184,9 +221,9 @@
       <h2>Skills</h2>
       <ul>
         <li>Programming: Python, C</li>
-        <li>IoT: Arduino, ESP32</li>
+        <li>IoT: Arduino, ESP32, LoRa SX1278</li>
         <li>PCB Design: KiCAD, Eagle CAD</li>
-        <li>Simulation Tools: Multisim, Keil µVision5</li>
+        <li>Simulation Tools: Multisim, Keil µVision5, MATLAB</li>
         <li>Cloud Platforms: Firebase</li>
         <li>3D Modelling: Fusion 360</li>
         <li>Static Web Development</li>
@@ -224,20 +261,31 @@
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
+      <h2>Internships & Experience</h2>
+      <div class="experience">
+        <p><strong>Intern | Fertilizers and Chemicals Travancore Ltd. (FACT) (June-2024) </strong></p>
+        <p>
+          Gained practical exposure to industrial electrical systems, instrumentation, and control setups. Understood large-scale power distribution and monitoring systems used in manufacturing
+        </p>
+      </div>
+      
+      <div class="experience">
+        <p><strong>HV Lead – E-Baja Team | SAE E-BAJA 2026 </strong></p>
+        <p>
+        Leading the High Voltage (HV) subsystem for the college’s E-Baja electric vehicle team. Responsible for selection, integration, and safety design of motor, controller, and battery system.</p>
+      </div>
+      
       <div class="experience">
         <p><strong>IoT Lead, Team Mitsmotorsports | GKDC 2025</strong></p>
         <p>
-          Led the IoT system for a nationally ranked Go-Kart team (AIR 7, Kerala
-          1st). Designed and implemented data logging solutions for vehicle
-          performance analysis.
+          Led the IoT system for a nationally ranked Go-Kart team (AIR 7, Kerala 1st). Designed and implemented data logging solutions for vehicle performance analysis.
         </p>
       </div>
 
       <div class="experience">
         <p>
           <strong
-            >AI Chatbot Developer Intern, IBM SkillsBuild (June 2024 – July
+            >AI Chatbot Developer Intern | IBM SkillsBuild (June 2024 – July
             2024)</strong
           >
         </p>
@@ -270,16 +318,16 @@
       <h2>Achievements</h2>
       <ul>
         <li>
-          Shortlisted in the<strong> Top 20 </strong>Nationwide Teams at the
-          <strong>Big Idea Tech Competition by V-Guard (2024)</strong>.
-        </li>
-        <li>
           <strong>All India Rank 7 </strong>& All Kerala 1st Place –
           <strong>GKDC 2025.</strong>
         </li>
         <li>
           <strong>2nd Runner-up</strong> – Mazhavil Manorama Fastrack
           <strong>Automobile Project Award 2025.</strong>
+        </li>
+        <li>
+          Shortlisted in the<strong> Top 20 </strong>Nationwide Teams at the
+          <strong>Big Idea Tech Competition by V-Guard (2024)</strong>.
         </li>
         <li>
           <strong>Runner-up</strong> in
@@ -296,6 +344,7 @@
         </li>
       </ul>
     </section>
+    </div>
 
     <section id="contact">
       <h2>Contact</h2>
